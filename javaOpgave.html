@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Javascript</title>
+</head>
+<body>
+    <div id="app">
+        <input id="inputField" v-model="word" @keyup.enter="saveWord(word)" placeholder="Type a word">
+        <button id="button2" v-on:click="ShowWords()" class="btn btn-primary">Show</button>
+        <div id="outputField" v-if="words[0] === null">list is empty</div>
+
+        <div id="hej" v-if="message == true">
+        <ul>
+            <li v-for="word in words">
+                {{ word }}
+            </li>
+        </ul>
+        </div>
+    </div>
+
+    <script src="javaOpgave.js"></script>
+</body>
+</html>
