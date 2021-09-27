@@ -9,6 +9,7 @@
 </head>
 <body>
     <div id="app">
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">String Manipulation</h1>
         <input id="inputField" v-model="word" @keyup.enter="saveWord(word)" placeholder="Type a word">
         <button id="button2" v-on:click="ShowWords()" class="btn btn-primary">Show</button>
         <div id="outputField" v-if="words[0] === null">list is empty</div>
